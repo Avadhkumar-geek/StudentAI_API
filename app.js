@@ -11,44 +11,76 @@ app.get('/', (req, res) => {
         statusCode: res.statusCode
     };
 
-    const json = JSON.stringify(response);
-    res.end(json);
-})
+    res.json(response);
+});
 
 app.get('/search/:searchText', (req, res) => {
     const searchText = req.params.searchText.toLowerCase();
-    const searchRes = jsonData.filter(dataChunk => {
-        return dataChunk['title'].toLowerCase().includes(searchText);
+    const searchResults = jsonData.filter(item => {
+        return item['title'].toLowerCase().includes(searchText);
     });
+
     const response = {
-        result: searchRes.map(entry => {
+        results: searchResults.map(entry => {
             return {
                 id: entry.id,
                 icon: entry.icon,
                 title: entry.title,
                 disc: entry.disc
-            }
+            };
         })
     };
 
-    const json = JSON.stringify(response);
-    res.end(json);
-})
+    res.json(response);
+});
 
 app.get('/id/:id', (req, res) => {
-    const paramId = req.params.id.toLowerCase();
-    jsonData.forEach(dataChunk => {
-        if (dataChunk['id'] === paramId) {
-            searchRes = dataChunk
-        }
+    const requestedId = req.params.id.toLowerCase();
+    const searchResult = jsonData.find(item => {
+        return item['id'] === requestedId;
     });
+
+    if (!searchResult) {
+        res.status(404).json({ error: 'ID not found' });
+        return;
+    }
+
     const response = {
-        result: searchRes
+        result: {
+            id: searchResult.id,
+            title: searchResult.title,
+            icon: searchResult.icon,
+            disc: searchResult.disc
+        }
     };
 
-    const json = JSON.stringify(response);
-    res.end(json);
-})
+    res.json(response);
+});
 
+app.get('/cards/:num', (req, res) => {
+    const requestedCount = parseInt(req.params.num);
 
-app.listen(PORT);
+    if (isNaN(requestedCount) || requestedCount <= 0) {
+        res.status(400).json({ error: 'Invalid card count' });
+        return;
+    }
+
+    const cardData = jsonData.slice(0, requestedCount);
+
+    const response = {
+        results: cardData.map(cardData => {
+            return {
+                id: cardData.id,
+                title: cardData.title,
+                icon: cardData.icon,
+                disc: cardData.disc
+            };
+        })
+    };
+
+    res.json(response);
+});
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
