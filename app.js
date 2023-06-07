@@ -2,7 +2,7 @@ const express = require('express');
 const data = require('./data.json');
 
 const app = express()
-
+const PORT = process.env.PORT || 8080
 app.get('/', (req, res) => {
     const response = {
         greeting: "Hey, Buddy! Welcome to the StudentAI API",
@@ -20,7 +20,14 @@ app.get('/search/:searchText', (req, res) => {
         return user['title'].toLowerCase().includes(searchText);
     });
     const response = {
-        result: searchRes
+        result: searchRes.map(entry => {
+            return {
+                id: entry.id,
+                icon: entry.icon,
+                title: entry.title,
+                disc: entry.disc
+            }
+        })
     };
 
     const json = JSON.stringify(response);
@@ -28,4 +35,4 @@ app.get('/search/:searchText', (req, res) => {
 })
 
 
-app.listen(8080);
+app.listen(PORT);
