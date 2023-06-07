@@ -3,6 +3,8 @@ const data = require('./data.json');
 
 const app = express()
 const PORT = process.env.PORT || 8080
+const jsonData = data['data'];
+
 app.get('/', (req, res) => {
     const response = {
         greeting: "Hey, Buddy! Welcome to the StudentAI API",
@@ -15,9 +17,8 @@ app.get('/', (req, res) => {
 
 app.get('/search/:searchText', (req, res) => {
     const searchText = req.params.searchText.toLowerCase();
-    const jsonData = data['data'];
-    const searchRes = jsonData.filter(user => {
-        return user['title'].toLowerCase().includes(searchText);
+    const searchRes = jsonData.filter(dataChunk => {
+        return dataChunk['title'].toLowerCase().includes(searchText);
     });
     const response = {
         result: searchRes.map(entry => {
@@ -28,6 +29,21 @@ app.get('/search/:searchText', (req, res) => {
                 disc: entry.disc
             }
         })
+    };
+
+    const json = JSON.stringify(response);
+    res.end(json);
+})
+
+app.get('/id/:id', (req, res) => {
+    const paramId = req.params.id.toLowerCase();
+    jsonData.forEach(dataChunk => {
+        if (dataChunk['id'] === paramId) {
+            searchRes = dataChunk
+        }
+    });
+    const response = {
+        result: searchRes
     };
 
     const json = JSON.stringify(response);
