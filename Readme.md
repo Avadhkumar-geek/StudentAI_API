@@ -38,7 +38,7 @@ Example response:
 
 This endpoint allows you to search for student data based on a specific text. It performs a case-insensitive search in the dataset's `title` field and returns matching results.
 
-Example response for searching "math":
+Example response for `url/search/topic`:
 
 ```json
 {
@@ -63,7 +63,7 @@ Example response for searching "math":
 
 This endpoint retrieves the student data associated with a specific ID.
 
-Example response for ID "3":
+Example response for `url/id/topic-explainer`:
 
 ```json
 {
@@ -88,7 +88,7 @@ If the provided ID is not found, the response will be:
 
 This endpoint returns a specified number of student data cards from the beginning of the dataset.
 
-Example response for `num=3`:
+Example response for `url/cards/3`:
 
 ```json
 {
