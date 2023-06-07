@@ -14,8 +14,8 @@ app.get('/', (req, res) => {
 })
 
 app.get('/search/:searchText', (req, res) => {
-    const searchText = req.params.searchText.toLowerCase(); // use req.params.searchText instead of just req.params
-    const jsonData = data['data']; // fix typo in variable name
+    const searchText = req.params.searchText.toLowerCase();
+    const jsonData = data['data'];
     const searchRes = jsonData.filter(user => {
         return user['title'].toLowerCase().includes(searchText);
     });
