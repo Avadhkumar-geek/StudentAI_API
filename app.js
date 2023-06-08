@@ -68,7 +68,8 @@ app.get('/cards/:num', (req, res) => {
                 id: cardData.id,
                 title: cardData.title,
                 icon: cardData.icon,
-                disc: cardData.disc
+                disc: cardData.disc,
+                color : cardData.color
             };
         })
     };
