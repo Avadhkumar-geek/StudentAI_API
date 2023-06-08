@@ -46,12 +46,7 @@ app.get('/id/:id', (req, res) => {
     }
 
     const response = {
-        result: {
-            id: searchResult.id,
-            title: searchResult.title,
-            icon: searchResult.icon,
-            disc: searchResult.disc
-        }
+        result: searchResult
     };
 
     res.json(response);
