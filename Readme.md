@@ -34,11 +34,20 @@ Example response:
 }
 ```
 
-### GET /search/:searchText
+### GET /search
 
-This endpoint allows you to search for student data based on a specific text. It performs a case-insensitive search in the dataset's `title` field and returns matching results.
+This endpoint allows you to search for student data based on a specific text and filter criteria. It performs a case-insensitive search in the dataset's `title` field and returns matching results. You can specify pagination parameters using the query parameters `page` and `limit`, and filter criteria using the query parameter `filters`.
 
-Example response for `url/search/topic`:
+The `filters` parameter should contain a comma-separated list of fields to search within. By default, only the `title` field is searched.
+
+Default values:
+`page=1`
+`limit=10`
+`filters=title`
+
+Example URL: `http://localhost:8080/search?apps=topic&filters=title,disc&page=1&limit=10`
+
+Example response:
 
 ```json
 {
@@ -46,12 +55,14 @@ Example response for `url/search/topic`:
         {
             "id": "topic-explainer",
             "icon": "Icons.topic",
+            "color": "#FFC107",
             "title": "Topic Explainer",
             "disc": "Explain Like 5 Year Old Child"
         },
         {
             "id": "compare-topics",
             "icon": "Icons.compare",
+            "color": "#607D8B",
             "title": "Compare Topic",
             "disc": "Get Difference with Pros & Cons"
         }
@@ -63,14 +74,17 @@ Example response for `url/search/topic`:
 
 This endpoint retrieves the student data associated with a specific ID.
 
-Example response for `url/id/topic-explainer`:
+Example URL: `http://localhost:8080/id/topic-explainer`
+
+Example response:
 
 ```json
 {
     "result": {
         "id": "topic-explainer",
-        "title": "Topic Explainer",
         "icon": "Icons.topic",
+        "color": "#FFC107",
+        "title": "Topic Explainer",
         "disc": "Explain Like 5 Year Old Child"
     }
 }
@@ -80,34 +94,13 @@ If the provided ID is not found, the response will be:
 
 ```json
 {
-    "result": null
+    "error": "ID not found"
 }
 ```
 
-### GET /cards/:num
+## Error handling
 
-This endpoint returns a specified number of student data cards from the beginning of the dataset.
-
-Example response for `url/cards/3`:
-
-```json
-{
-    "results": [
-        {
-            "id": "topic-explainer",
-            "title": "Topic Explainer",
-            "icon": "Icons.topic",
-            "disc": "Explain Like 5 Year Old Child"
-        },
-        {
-            "id": "grammar-correction",
-            "title": "Grammarian",
-            "icon": "Icons.abc",
-            "disc": "Check Your Grammar"
-        }
-    ]
-}
-```
+If an error occurs in any of the endpoints, the server will return a JSON response with an `error` message and a status code of 500.
 
 ## License
 

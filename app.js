@@ -1,9 +1,9 @@
 const express = require('express');
 const data = require('./data.json');
 
-const app = express()
-const PORT = process.env.PORT || 8080
-const jsonData = data['data'];
+const app = express();
+const PORT = process.env.PORT || 8080;
+const { data: jsonData } = data;
 
 app.get('/', (req, res) => {
     const response = {
@@ -14,21 +14,47 @@ app.get('/', (req, res) => {
     res.json(response);
 });
 
-app.get('/search/:searchText', (req, res) => {
-    const searchText = req.params.searchText.toLowerCase();
-    const searchResults = jsonData.filter(item => {
-        return item['title'].toLowerCase().includes(searchText);
-    });
+const paginationMiddleware = () => {
+    return (req, res, next) => {
+        const pageNumber = +req.query.page || 1;
+        const pageSize = parseInt(req.query.limit) || 10;
+        const startIndex = (pageNumber - 1) * pageSize;
+        const endIndex = startIndex + pageSize;
+
+        req.pagination = {
+            page: pageNumber,
+            limit: pageSize,
+            startIndex,
+            endIndex
+        };
+
+        next();
+    };
+};
+
+app.get('/search', paginationMiddleware(), (req, res) => {
+    const { startIndex, endIndex } = req.pagination;
+    const searchText = req.query.apps;
+    const filters = req.query.filters;
+    const filterArray = filters?.split(',') || ['title'];
+
+    let searchResults = searchText
+        ? jsonData.filter((item) => {
+            return filterArray.every(filterTerm => item[filterTerm].toLowerCase().includes(searchText.toLowerCase()));
+        })
+        : jsonData.slice(startIndex, endIndex);
+
+    searchResults = searchResults.slice(startIndex, endIndex);
 
     const response = {
-        results: searchResults.map(entry => {
-            return {
-                id: entry.id,
-                icon: entry.icon,
-                title: entry.title,
-                disc: entry.disc
-            };
-        })
+        results: searchResults.map(({ id, icon, color, title, disc }) => (
+            {
+                id,
+                icon,
+                color,
+                title,
+                disc
+            }))
     };
 
     res.json(response);
@@ -36,9 +62,7 @@ app.get('/search/:searchText', (req, res) => {
 
 app.get('/id/:id', (req, res) => {
     const requestedId = req.params.id.toLowerCase();
-    const searchResult = jsonData.find(item => {
-        return item['id'] === requestedId;
-    });
+    const searchResult = jsonData.find((item) => item.id === requestedId);
 
     if (!searchResult) {
         res.status(404).json({ error: 'ID not found' });
@@ -52,29 +76,9 @@ app.get('/id/:id', (req, res) => {
     res.json(response);
 });
 
-app.get('/cards/:num', (req, res) => {
-    const requestedCount = parseInt(req.params.num);
-
-    if (isNaN(requestedCount) || requestedCount <= 0) {
-        res.status(400).json({ error: 'Invalid card count' });
-        return;
-    }
-
-    const cardData = jsonData.slice(0, requestedCount);
-
-    const response = {
-        results: cardData.map(cardData => {
-            return {
-                id: cardData.id,
-                title: cardData.title,
-                icon: cardData.icon,
-                disc: cardData.disc,
-                color : cardData.color
-            };
-        })
-    };
-
-    res.json(response);
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).json({ error: 'Something went wrong!' });
 });
 
 app.listen(PORT, () => {
