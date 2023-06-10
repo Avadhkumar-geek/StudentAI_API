@@ -2,7 +2,7 @@
   "data": [
     {
       "id": "topic-explainer",
-      "icon": "Icons.topic",
+      "icon": "topic",
       "color": "0xFFE0B447",
       "title": "Topic Explainer",
       "disc": "Explain Like 5 Year Old Child",
@@ -38,7 +38,7 @@
     },
     {
       "id": "grammar-correction",
-      "icon": "Icons.abc",
+      "icon": "abc",
       "color": "0xFFC36B74",
       "title": "Grammarian",
       "disc": "Check Your Grammar",
@@ -56,7 +56,7 @@
     },
     {
       "id": "code-generator",
-      "icon": "Icons.code",
+      "icon": "code",
       "color": "0xFFA4B8C4",
       "title": "Code Generator",
       "disc": "Generate Code on Your Demand",
@@ -80,7 +80,7 @@
     },
     {
       "id": "code-debugging",
-      "icon": "Icons.bug_report",
+      "icon": "bug_report",
       "color": "0xFF5BBA6F",
       "title": "Debug & Fix Errors in Code",
       "disc": "Helps Fix Your Code",
@@ -98,7 +98,7 @@
     },
     {
       "id": "comprehensive-study-plan",
-      "icon": "Icons.lightbulb",
+      "icon": "lightbulb",
       "color": "0xFF87677B",
       "title": "Create Study Plan",
       "disc": "Comprehensive Study Plan",
@@ -122,7 +122,7 @@
     },
     {
       "id": "summarise-text",
-      "icon": "Icons.summarize",
+      "icon": "summarize",
       "color": "0xFFf4a261",
       "title": "Summarize the Text",
       "disc": "Easy & Quick to Understand",
@@ -146,7 +146,7 @@
     },
     {
       "id": "compare-topics",
-      "icon": "Icons.compare",
+      "icon": "compare",
       "color": "0xFF337EB0",
       "title": "Compare Topic",
       "disc": "Get Difference with Pros & Cons",
@@ -176,7 +176,7 @@
     },
     {
       "id": "mcq-type-quiz",
-      "icon": "Icons.quiz",
+      "icon": "quiz",
       "color": "0xFF61c9a8",
       "title": "MCQ Type Quiz",
       "disc": "Generate MCQs with Answer",
