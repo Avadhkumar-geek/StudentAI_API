@@ -47,7 +47,7 @@ app.get('/search', paginationMiddleware(), (req, res) => {
     searchResults = searchResults.slice(startIndex, endIndex);
 
     const response = {
-        results: searchResults.map(({ id, icon, color, title, disc }) => (
+        result: searchResults.map(({ id, icon, color, title, disc }) => (
             {
                 id,
                 icon,
@@ -78,7 +78,7 @@ app.get('/id/:id', (req, res) => {
 
 app.use((err, req, res, next) => {
     console.error(err.stack);
-    res.status(500).json({ error: 'Something went wrong!' });
+    res.status(500).json({ error: 'Details not found!' });
 });
 
 app.listen(PORT, () => {
