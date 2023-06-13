@@ -180,7 +180,7 @@
       "color": "0xFF61c9a8",
       "title": "MCQ Type Quiz",
       "disc": "Generate MCQs with Answer",
-      "prompt": "create a mcq quiz on topic {topic} in json format with keys question, options with list of option and answer, and all objects must be contain in key questions. Response should directly starts with {}.",
+      "prompt": "create a mcq quiz on topic {topic} with {number} number of mcq, in json format with keys question, options with list of option and answer, and all objects must be contain in a key questions. Response should directly starts with {}.",
       "schema": {
         "properties": {
           "{topic}": {
