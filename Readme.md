@@ -78,7 +78,7 @@ Example URL: `http://localhost:8080/id/topic-explainer`
 
 Example response:
 
-```json
+```
 {
     "result": {
         "id": "topic-explainer",
