@@ -86,6 +86,7 @@ Example response:
         "color": "#FFC107",
         "title": "Topic Explainer",
         "disc": "Explain Like 5 Year Old Child"
+        ...
     }
 }
 ```
