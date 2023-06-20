@@ -81,7 +81,7 @@
     {
       "id": "summarise-text",
       "icon": "summarize",
-      "color": "0xFFf4a261",
+      "color": "0xFF5BBA6F",
       "title": "Summarize the Text",
       "disc": "Easy & Quick to Understand",
       "prompt": "Summarize the text {text} in {count} words. Ensure the summary is clear, concise, and easy to understand for a general audience. Please use appropriate markdown format to improve the readability and comprehension of the response.",
@@ -105,7 +105,7 @@
     {
       "id": "english-dictionary",
       "icon": "menu_book",
-      "color": "0xFFf4a261",
+      "color": "0xFFA4B8C4",
       "title": "English Dictionary",
       "disc": "Find Meaning of Words",
       "prompt": "Act like an English teacher and give me the definition of the word {word}, in plain language, and give me three examples of its use in English. Also, give me an explanation of the etymology of the word",
@@ -125,7 +125,7 @@
       "icon": "translate",
       "color": "0xFFf4a261",
       "title": "Language Translator",
-      "disc": "",
+      "disc": "Translate from one language to another",
       "prompt": "Translate the sentence {sentence} from {source_language} to {target_language}",
       "schema": {
         "properties": {
@@ -203,7 +203,7 @@
       "icon": "mail",
       "color": "0xFF0077b5",
       "title": "Email Generator",
-      "disc": "",
+      "disc": "Generate email for any purpose",
       "prompt": "I want you to act as an email generator and help me compose a message to my {recipient}, regarding the {subject} subject. I am writing to ask for {purpose}. Can you compose an email that is both polite and professional in tone, and clearly conveys my message? Please provide prompts for the email body, including any relevant details or questions that should be included.",
       "schema": {
         "properties": {
