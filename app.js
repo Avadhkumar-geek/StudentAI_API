@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 const paginationMiddleware = () => {
     return (req, res, next) => {
         const pageNumber = +req.query.page || 1;
-        const pageSize = parseInt(req.query.limit) || 10;
+        const pageSize = parseInt(req.query.limit) || 50;
         const startIndex = (pageNumber - 1) * pageSize;
         const endIndex = startIndex + pageSize;
 
@@ -76,7 +76,7 @@ app.get('/id/:id', (req, res) => {
     res.json(response);
 });
 
-app.get('*', function(req, res){
+app.get('*', function (req, res) {
     res.status(500).json({ error: 'Details not found!' });
 });
 
