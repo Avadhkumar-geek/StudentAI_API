@@ -6,7 +6,7 @@
       "color": "0xFFE0B447",
       "title": "Topic Explainer",
       "disc": "Explain Like 5 Year Old Child",
-      "prompt": "Please explain the {topic} to me in a way that is easy to understand for someone who is {year} years old and has a basic understanding of {knows} and struggling with {struggles}. Please provide the response in markdown format, with an overview of the topic, its relevance, and any key concepts that are important to understand. Please keep the tone of the response informative and engaging.",
+      "prompt": "Please explain the {topic} to me in a way that is easy to understand for someone who is {year} years old and has a basic understanding of {knows} and struggling with {struggles}. Please provide the response in markdown format, with an overview of the topic, its relevance, and any key concepts that are important to understand. Please keep the tone of the response informative and also, include images to make it more engaging",
       "schema": {
         "properties": {
           "{topic}": {
@@ -50,48 +50,6 @@
             "title": "Enter Text",
             "default": "I is very happy",
             "placeholder": "Enter text"
-          }
-        }
-      }
-    },
-    {
-      "id": "code-generator",
-      "icon": "code",
-      "color": "0xFFA4B8C4",
-      "title": "Code Generator",
-      "disc": "Generate Code on Your Demand",
-      "prompt": "Generate modular and reusable code using {language} language that is optimized for performance and efficiency and adheres to coding standards and best practices. Please also include explicit instructions on any specific requirements for input variables or expected output. As needed, please engage subject matter experts with the necessary skills to successfully complete the task. Please use appropriate markdown format to improve the readability and comprehension of the response.",
-      "schema": {
-        "properties": {
-          "{topic}": {
-            "type": "text",
-            "title": "Topic",
-            "default": "Generate Fibonacci Series",
-            "placeholder": "Enter Topic to generate code"
-          },
-          "{language}": {
-            "type": "text",
-            "title": "Language",
-            "default": "Flutter",
-            "placeholder": "Enter language"
-          }
-        }
-      }
-    },
-    {
-      "id": "code-debugging",
-      "icon": "bug_report",
-      "color": "0xFF5BBA6F",
-      "title": "Debug & Fix Errors in Code",
-      "disc": "Helps Fix Your Code",
-      "prompt": "```{code}``` Debug the following code, wrapped in backticks, and find possible errors. Fix the code, add comments where you edited it, and suggest improvements if necessary. If the code is not optimized, optimize it. As you debug and improve the code, keep in mind the following 1. Use clear and concise variable names. 2. Avoid using reserved keywords as function or variable names. 3. Include comments that explain what each line of code does and your reasoning for any changes you make. 4. Optimize the code by reducing its time complexity or memory usage, if possible. In addition, keep in mind the expertise of our three expert roles: software developer, data scientist, and cyber security expert. Try to incorporate their knowledge and skills while debugging and optimizing the code. Please use appropriate markdown format to improve the readability and comprehension of the response.",
-      "schema": {
-        "properties": {
-          "{code}": {
-            "type": "text",
-            "title": "Enter Your Code",
-            "default": "print('Hello world!)",
-            "placeholder": "Enter Your Code to Fix Error"
           }
         }
       }
@@ -145,6 +103,72 @@
       }
     },
     {
+      "id": "english-dictionary",
+      "icon": "menu_book",
+      "color": "0xFFf4a261",
+      "title": "English Dictionary",
+      "disc": "Find Meaning of Words",
+      "prompt": "Act like an English teacher and give me the definition of the word {word}, in plain language, and give me three examples of its use in English. Also, give me an explanation of the etymology of the word",
+      "schema": {
+        "properties": {
+          "{word}": {
+            "type": "text",
+            "title": "Enter Word",
+            "default": "",
+            "placeholder": "Consult a dictionary and enter a word"
+          }
+        }
+      }
+    },
+    {
+      "id": "language-translator",
+      "icon": "translate",
+      "color": "0xFFf4a261",
+      "title": "Language Translator",
+      "disc": "",
+      "prompt": "Translate the sentence {sentence} from {source_language} to {target_language}",
+      "schema": {
+        "properties": {
+          "{sentence}": {
+            "type": "text",
+            "title": "Enter Sentence",
+            "default": "",
+            "placeholder": "Enter a sentence to translate"
+          },
+          "{source_language}": {
+            "type": "text",
+            "title": "Source Language",
+            "default": "",
+            "placeholder": "Enter the source language"
+          },
+          "{target_language}": {
+            "type": "text",
+            "title": "Target Language",
+            "default": "",
+            "placeholder": "Enter the target language"
+          }
+        }
+      }
+    },
+    {
+      "id": "math-teacher",
+      "icon": "calculate",
+      "color": "0xFF7F7F",
+      "title": "Math Teacher",
+      "disc": "Test your knowledge of basic math with this quiz!",
+      "prompt": "I want you to act as a math teacher. I will provide some mathematical equations or concepts, and it will be your job to explain them in easy-to-understand terms. This could include providing step-by-step instructions for solving a problem, demonstrating various techniques with visuals or suggesting online resources for further study. My first request is {question}?",
+      "schema": {
+        "properties": {
+          "{question}": {
+            "type": "text",
+            "title": "Question",
+            "default": "",
+            "placeholder": "Enter a math question"
+          }
+        }
+      }
+    },
+    {
       "id": "compare-topics",
       "icon": "compare",
       "color": "0xFF337EB0",
@@ -170,6 +194,78 @@
             "title": "No. of difference",
             "default": "5",
             "placeholder": "Enter a number"
+          }
+        }
+      }
+    },
+    {
+      "id": "email-generator",
+      "icon": "mail",
+      "color": "0xFF0077b5",
+      "title": "Email Generator",
+      "disc": "",
+      "prompt": "I want you to act as an email generator and help me compose a message to my {recipient}, regarding the {subject} subject. I am writing to ask for {purpose}. Can you compose an email that is both polite and professional in tone, and clearly conveys my message? Please provide prompts for the email body, including any relevant details or questions that should be included.",
+      "schema": {
+        "properties": {
+          "{recipient}": {
+            "type": "text",
+            "title": "Recipient",
+            "default": "",
+            "placeholder": "Enter the recipient's designation"
+          },
+          "{subject}": {
+            "type": "text",
+            "title": "Subject",
+            "default": "",
+            "placeholder": "Enter the email subject."
+          },
+          "{purpose}": {
+            "type": "textarea",
+            "title": "Purpose",
+            "default": "",
+            "placeholder": "Enter the purpose of the email."
+          }
+        }
+      }
+    },
+    {
+      "id": "chemical-reaction-visualizer",
+      "icon": "science",
+      "color": "0xFF8AC926",
+      "title": "Chemical Reaction Visualizer",
+      "disc": "A tool for visualizing chemical reactions",
+      "prompt": "Consider the chemical reaction {equation}. Explain it & Write out the balanced chemical equation for the reaction between these two reactants. Draw equations & Use best visualisation techniques to make it more understandable.",
+      "schema": {
+        "properties": {
+          "{equation}": {
+            "type": "text",
+            "title": "Reaction Equation",
+            "default": "CO2 + H20",
+            "placeholder": "Enter the chemical equation"
+          }
+        }
+      }
+    },
+    {
+      "id": "song-generator",
+      "icon": "music_note",
+      "color": "0xFFff69b4",
+      "title": "Song Generator",
+      "disc": "Custom song by a specified singer to help you memorize it better",
+      "prompt": "Write a song as {singer} on the topic of {topic}. So, I can memorize it in a better way.",
+      "schema": {
+        "properties": {
+          "{singer}": {
+            "type": "text",
+            "title": "Singer",
+            "default": "",
+            "placeholder": "Enter the name of the singer."
+          },
+          "{topic}": {
+            "type": "text",
+            "title": "Topic",
+            "default": "",
+            "placeholder": "Enter the topic of the song."
           }
         }
       }
