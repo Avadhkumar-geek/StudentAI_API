@@ -155,7 +155,7 @@
       "icon": "calculate",
       "color": "0xFF7F7F",
       "title": "Math Teacher",
-      "disc": "Test your knowledge of basic math with this quiz!",
+      "disc": "Ask questions about Math",
       "prompt": "I want you to act as a math teacher. I will provide some mathematical equations or concepts, and it will be your job to explain them in easy-to-understand terms. This could include providing step-by-step instructions for solving a problem, demonstrating various techniques with visuals or suggesting online resources for further study. My first request is {question}?",
       "schema": {
         "properties": {
@@ -232,7 +232,7 @@
       "id": "chemical-reaction-visualizer",
       "icon": "science",
       "color": "0xFF8AC926",
-      "title": "Chemical Reaction Visualizer",
+      "title": "Chemical Reactions",
       "disc": "A tool for visualizing chemical reactions",
       "prompt": "Consider the chemical reaction {equation}. Explain it & Write out the balanced chemical equation for the reaction between these two reactants. Draw equations & Use best visualisation techniques to make it more understandable.",
       "schema": {
@@ -251,7 +251,7 @@
       "icon": "music_note",
       "color": "0xFFff69b4",
       "title": "Song Generator",
-      "disc": "Custom song by a specified singer to help you memorize it better",
+      "disc": "Memorize topics with songs",
       "prompt": "Write a song as {singer} on the topic of {topic}. So, I can memorize it in a better way.",
       "schema": {
         "properties": {
