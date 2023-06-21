@@ -326,7 +326,7 @@
     },
     {
       "id": "scientific-concept",
-      "icon": "science",
+      "icon": "biotech",
       "color": "0xFFAABBCC",
       "title": "Scientific Concepts",
       "disc": "Learn Complex Scientific Concepts",
