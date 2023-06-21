@@ -2,7 +2,7 @@
   "data": [
     {
       "id": "topic-explainer",
-      "icon": "topic",
+      "icon": "0xf452",
       "color": "0xFFE0B447",
       "title": "Topic Explainer",
       "disc": "Explain Like 5 Year Old Child",
@@ -38,7 +38,7 @@
     },
     {
       "id": "grammar-correction",
-      "icon": "abc",
+      "icon": "0xf05b1",
       "color": "0xFFC36B74",
       "title": "Grammarian",
       "disc": "Check Your Grammar",
@@ -56,7 +56,7 @@
     },
     {
       "id": "comprehensive-study-plan",
-      "icon": "lightbulb",
+      "icon": "0xf06f7",
       "color": "0xFF87677B",
       "title": "Create Study Plan",
       "disc": "Comprehensive Study Plan",
@@ -80,7 +80,7 @@
     },
     {
       "id": "summarise-text",
-      "icon": "summarize",
+      "icon": "0xf3ff",
       "color": "0xFF5BBA6F",
       "title": "Summarize the Text",
       "disc": "Easy & Quick to Understand",
@@ -104,7 +104,7 @@
     },
     {
       "id": "english-dictionary",
-      "icon": "menu_book",
+      "icon": "0xf1c2",
       "color": "0xFFA4B8C4",
       "title": "English Dictionary",
       "disc": "Find Meaning of Words",
@@ -122,7 +122,7 @@
     },
     {
       "id": "language-translator",
-      "icon": "translate",
+      "icon": "0xf45e",
       "color": "0xFFf4a261",
       "title": "Language Translator",
       "disc": "Translate from one language to another",
@@ -152,7 +152,7 @@
     },
     {
       "id": "math-teacher",
-      "icon": "calculate",
+      "icon": "0xef10",
       "color": "0xFF7F7F7F",
       "title": "Math Teacher",
       "disc": "Ask questions about Math",
@@ -170,7 +170,7 @@
     },
     {
       "id": "compare-topics",
-      "icon": "compare",
+      "icon": "0xef71",
       "color": "0xFF337EB0",
       "title": "Compare Topic",
       "disc": "Get Difference with Pros & Cons",
@@ -200,7 +200,7 @@
     },
     {
       "id": "email-generator",
-      "icon": "mail",
+      "icon": "0xf018",
       "color": "0xFF0077b5",
       "title": "Email Generator",
       "disc": "Generate email for any purpose",
@@ -230,7 +230,7 @@
     },
     {
       "id": "chemical-reaction-visualizer",
-      "icon": "science",
+      "icon": "0xf33d",
       "color": "0xFF8AC926",
       "title": "Chemical Reactions",
       "disc": "Visualize chemical reactions",
@@ -248,7 +248,7 @@
     },
     {
       "id": "song-generator",
-      "icon": "music_note",
+      "icon": "0xf1fb",
       "color": "0xFFff69b4",
       "title": "Song Generator",
       "disc": "Memorize topics with songs",
@@ -272,7 +272,7 @@
     },
     {
       "id": "mcq-type-quiz",
-      "icon": "quiz",
+      "icon": "0xf2e2",
       "color": "0xFF61c9a8",
       "title": "MCQ Type Quiz",
       "disc": "Generate MCQs with Answer",
@@ -296,7 +296,7 @@
     },
     {
       "id": "historical-event-summary",
-      "icon": "summary",
+      "icon": "0xf101",
       "color": "0xFFAABBCC",
       "title": "Historical Event Summary",
       "disc": "Summarize a Historical Event",
@@ -326,7 +326,7 @@
     },
     {
       "id": "scientific-concept",
-      "icon": "biotech",
+      "icon": "0xeecf",
       "color": "0xFFAABBCC",
       "title": "Scientific Concepts",
       "disc": "Learn Complex Scientific Concepts",
@@ -356,7 +356,7 @@
     },
     {
       "id": "historical-event-analysis",
-      "icon": "analytics",
+      "icon": "0xee74",
       "color": "0xFFAABBCC",
       "title": "History Analysis",
       "disc": "Understand History with Analysis",
