@@ -204,7 +204,7 @@
       "color": "0xFF0077b5",
       "title": "Email Generator",
       "disc": "Generate email for any purpose",
-      "prompt": "I want you to act as an email generator and help me compose a message to my {recipient}, regarding the {subject} subject. I am writing to ask for {purpose}. Can you compose an email that is both polite and professional in tone, and clearly conveys my message? Please provide prompts for the email body, including any relevant details or questions that should be included.",
+      "prompt": "I want you to act as an email generator and help me compose a message to my {recipient}, regarding the {subject} subject. I am writing to ask for {purpose}. Can you compose an email that is both polite and professional in tone, and clearly conveys my message. Please use appropriate markdown format to improve the readability and comprehension of the response.",
       "schema": {
         "properties": {
           "{recipient}": {
@@ -233,8 +233,8 @@
       "icon": "science",
       "color": "0xFF8AC926",
       "title": "Chemical Reactions",
-      "disc": "A tool for visualizing chemical reactions",
-      "prompt": "Consider the chemical reaction {equation}. Explain it & Write out the balanced chemical equation for the reaction between these two reactants. Draw equations & Use best visualisation techniques to make it more understandable.",
+      "disc": "Visualize chemical reactions",
+      "prompt": "Consider the chemical reaction {equation}. Explain it & Write out the balanced chemical equation for the reaction between these two reactants. Draw equations in markdown & Use best visualisation techniques to make it more understandable.",
       "schema": {
         "properties": {
           "{equation}": {
@@ -252,7 +252,7 @@
       "color": "0xFFff69b4",
       "title": "Song Generator",
       "disc": "Memorize topics with songs",
-      "prompt": "Write a song as {singer} on the topic of {topic}. So, I can memorize it in a better way.",
+      "prompt": "Write a song as {singer} on the topic of {topic}. So, I can memorize it in a better way. Use the appropriate markdown format to improve the readability and comprehension of the response.",
       "schema": {
         "properties": {
           "{singer}": {
@@ -325,66 +325,12 @@
       }
     },
     {
-      "id": "fitness-workout-generator",
-      "icon": "fitness_center",
-      "color": "0xFF88CC99",
-      "title": "Fitness Workout Generator",
-      "disc": "Create a Custom Fitness Workout",
-      "prompt": "Design a {length} workout plan for {goal} training. Include a combination of exercises targeting {muscle groups} and specify the number of sets and reps for each exercise. You can also suggest any additional equipment or modifications if necessary. Feel free to provide tips on form, breathing, or intensity to maximize the effectiveness of the workout.",
-      "schema": {
-        "properties": {
-          "{length}": {
-            "type": "text",
-            "title": "Workout Length",
-            "default": "30-minute",
-            "placeholder": "Enter Workout Length"
-          },
-          "{goal}": {
-            "type": "text",
-            "title": "Fitness Goal",
-            "default": "Strength",
-            "placeholder": "Enter Fitness Goal"
-          },
-          "{muscle groups}": {
-            "type": "text",
-            "title": "Targeted Muscle Groups",
-            "default": "Upper Body",
-            "placeholder": "Enter Targeted Muscle Groups"
-          }
-        }
-      }
-    },
-    {
-      "id": "travel-itinerary-planner",
-      "icon": "flight_takeoff",
-      "color": "0xFF6699FF",
-      "title": "Travel Itinerary Planner",
-      "disc": "Design a Memorable Trip",
-      "prompt": "Create a personalized {type} travel itinerary for an upcoming {occasion}. Include a list of must-visit attractions, recommended restaurants, transportation options, and any additional tips or suggestions. Your goal is to help the traveler have a memorable and enjoyable experience during their {occasion} trip.",
-      "schema": {
-        "properties": {
-          "{type}": {
-            "type": "text",
-            "title": "Travel Type",
-            "default": "Family-friendly",
-            "placeholder": "Enter Travel Type"
-          },
-          "{occasion}": {
-            "type": "text",
-            "title": "Occasion",
-            "default": "Summer Vacation",
-            "placeholder": "Enter Occasion"
-          }
-        }
-      }
-    },
-    {
-      "id": "scientific-concept-visualizer",
+      "id": "scientific-concept",
       "icon": "science",
       "color": "0xFFAABBCC",
       "title": "Scientific Concept Visualizer",
       "disc": "Visualize Complex Scientific Concepts",
-      "prompt": "Choose a complex scientific concept, such as {concept}, and create a visual representation that simplifies its understanding. Use diagrams, illustrations, or animations to explain the key principles and processes involved. Provide a brief description alongside the visuals to enhance comprehension. Your goal is to make the concept accessible to individuals with a basic understanding of {field} but struggling with {struggles}.",
+      "prompt": "Choose a complex scientific concept, such as {concept}, and create a visual representation that simplifies its understanding in markdown. Use diagrams, illustrations to explain the key principles and processes involved. Provide a brief description alongside the visuals to enhance comprehension. Your goal is to make the concept accessible to individuals with a basic understanding of {field} but struggling with {struggles}.",
       "schema": {
         "properties": {
           "{concept}": {
@@ -412,9 +358,9 @@
       "id": "historical-event-analysis",
       "icon": "analytics",
       "color": "0xFFAABBCC",
-      "title": "Historical Event Analysis",
-      "disc": "Analyze and Understand Historical Events",
-      "prompt": "Choose a significant historical event, such as {event}, and provide a comprehensive analysis of its causes, consequences, and impact on society. In your analysis, consider the political, social, and economic factors that contributed to the event. Use relevant examples, primary sources, and scholarly references to support your analysis.",
+      "title": "History Analysis",
+      "disc": "Understand History with Analysis",
+      "prompt": "Choose a significant historical event, such as {event}, and provide a comprehensive analysis of its causes, consequences, and impact on society. In your analysis, consider the political, social, and economic factors that contributed to the event. Use relevant examples, primary sources, and scholarly references to support your analysis. Give response in markdown.",
       "schema": {
         "properties": {
           "{event}": {
