@@ -153,7 +153,7 @@
     {
       "id": "math-teacher",
       "icon": "calculate",
-      "color": "0xFF7F7F",
+      "color": "0xFF7F7F7F",
       "title": "Math Teacher",
       "disc": "Ask questions about Math",
       "prompt": "I want you to act as a math teacher. I will provide some mathematical equations or concepts, and it will be your job to explain them in easy-to-understand terms. This could include providing step-by-step instructions for solving a problem, demonstrating various techniques with visuals or suggesting online resources for further study. My first request is {question}?",
@@ -290,6 +290,138 @@
             "title": "No. of Questions",
             "default": "5",
             "Placeholder": "Enter number"
+          }
+        }
+      }
+    },
+    {
+      "id": "historical-event-summary",
+      "icon": "summary",
+      "color": "0xFFAABBCC",
+      "title": "Historical Event Summary",
+      "disc": "Summarize a Historical Event",
+      "prompt": "Summarize the {event} that took place in {year}. Provide a concise overview of the event, its significance, and its impact on {region/country/world}. You can include key dates, important figures, and any relevant details. Feel free to use bullet points or headings to structure your response and make it easier to read.",
+      "schema": {
+        "properties": {
+          "{event}": {
+            "type": "text",
+            "title": "Event",
+            "default": "Industrial Revolution",
+            "placeholder": "Enter Event Name"
+          },
+          "{year}": {
+            "type": "number",
+            "title": "Year",
+            "default": 1760,
+            "placeholder": "Enter Year"
+          },
+          "{region/country/world}": {
+            "type": "text",
+            "title": "Region/Country/World",
+            "default": "Europe",
+            "placeholder": "Enter Region/Country/World"
+          }
+        }
+      }
+    },
+    {
+      "id": "fitness-workout-generator",
+      "icon": "fitness_center",
+      "color": "0xFF88CC99",
+      "title": "Fitness Workout Generator",
+      "disc": "Create a Custom Fitness Workout",
+      "prompt": "Design a {length} workout plan for {goal} training. Include a combination of exercises targeting {muscle groups} and specify the number of sets and reps for each exercise. You can also suggest any additional equipment or modifications if necessary. Feel free to provide tips on form, breathing, or intensity to maximize the effectiveness of the workout.",
+      "schema": {
+        "properties": {
+          "{length}": {
+            "type": "text",
+            "title": "Workout Length",
+            "default": "30-minute",
+            "placeholder": "Enter Workout Length"
+          },
+          "{goal}": {
+            "type": "text",
+            "title": "Fitness Goal",
+            "default": "Strength",
+            "placeholder": "Enter Fitness Goal"
+          },
+          "{muscle groups}": {
+            "type": "text",
+            "title": "Targeted Muscle Groups",
+            "default": "Upper Body",
+            "placeholder": "Enter Targeted Muscle Groups"
+          }
+        }
+      }
+    },
+    {
+      "id": "travel-itinerary-planner",
+      "icon": "flight_takeoff",
+      "color": "0xFF6699FF",
+      "title": "Travel Itinerary Planner",
+      "disc": "Design a Memorable Trip",
+      "prompt": "Create a personalized {type} travel itinerary for an upcoming {occasion}. Include a list of must-visit attractions, recommended restaurants, transportation options, and any additional tips or suggestions. Your goal is to help the traveler have a memorable and enjoyable experience during their {occasion} trip.",
+      "schema": {
+        "properties": {
+          "{type}": {
+            "type": "text",
+            "title": "Travel Type",
+            "default": "Family-friendly",
+            "placeholder": "Enter Travel Type"
+          },
+          "{occasion}": {
+            "type": "text",
+            "title": "Occasion",
+            "default": "Summer Vacation",
+            "placeholder": "Enter Occasion"
+          }
+        }
+      }
+    },
+    {
+      "id": "scientific-concept-visualizer",
+      "icon": "science",
+      "color": "0xFFAABBCC",
+      "title": "Scientific Concept Visualizer",
+      "disc": "Visualize Complex Scientific Concepts",
+      "prompt": "Choose a complex scientific concept, such as {concept}, and create a visual representation that simplifies its understanding. Use diagrams, illustrations, or animations to explain the key principles and processes involved. Provide a brief description alongside the visuals to enhance comprehension. Your goal is to make the concept accessible to individuals with a basic understanding of {field} but struggling with {struggles}.",
+      "schema": {
+        "properties": {
+          "{concept}": {
+            "type": "text",
+            "title": "Scientific Concept",
+            "default": "Quantum Mechanics",
+            "placeholder": "Enter Scientific Concept"
+          },
+          "{field}": {
+            "type": "text",
+            "title": "Field of Study",
+            "default": "Physics",
+            "placeholder": "'physics', 'biology', etc."
+          },
+          "{struggles}": {
+            "type": "text",
+            "title": "Struggling with",
+            "default": "Complex Equations",
+            "placeholder": "'complex equations', 'abstract theories', etc."
+          }
+        }
+      }
+    },
+    {
+      "id": "historical-event-analysis",
+      "icon": "analytics",
+      "color": "0xFFAABBCC",
+      "title": "Historical Event Analysis",
+      "disc": "Analyze and Understand Historical Events",
+      "prompt": "Choose a significant historical event, such as {event}, and provide a comprehensive analysis of its causes, consequences, and impact on society. In your analysis, consider the political, social, and economic factors that contributed to the event. Use relevant examples, primary sources, and scholarly references to support your analysis.",
+      "schema": {
+        "properties": {
+          "{event}": {
+            "type": "text",
+            "title": "Historical Event",
+            "default": "World War II",
+            "placeholder": "Enter Historical Event"
           }
         }
       }
