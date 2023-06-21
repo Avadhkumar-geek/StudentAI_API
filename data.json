@@ -328,8 +328,8 @@
       "id": "scientific-concept",
       "icon": "science",
       "color": "0xFFAABBCC",
-      "title": "Scientific Concept Visualizer",
-      "disc": "Visualize Complex Scientific Concepts",
+      "title": "Scientific Concepts",
+      "disc": "Learn Complex Scientific Concepts",
       "prompt": "Choose a complex scientific concept, such as {concept}, and create a visual representation that simplifies its understanding in markdown. Use diagrams, illustrations to explain the key principles and processes involved. Provide a brief description alongside the visuals to enhance comprehension. Your goal is to make the concept accessible to individuals with a basic understanding of {field} but struggling with {struggles}.",
       "schema": {
         "properties": {
