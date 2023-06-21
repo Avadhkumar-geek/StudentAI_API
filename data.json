@@ -125,7 +125,7 @@
       "icon": "0xf45e",
       "color": "0xFFf4a261",
       "title": "Language Translator",
-      "disc": "Translate from one language to another",
+      "disc": "Your Personal Translator",
       "prompt": "Translate the sentence {sentence} from {source_language} to {target_language}",
       "schema": {
         "properties": {
@@ -153,7 +153,7 @@
     {
       "id": "math-teacher",
       "icon": "0xef10",
-      "color": "0xFF7F7F7F",
+      "color": "0xFFC89CD5",
       "title": "Math Teacher",
       "disc": "Ask questions about Math",
       "prompt": "I want you to act as a math teacher. I will provide some mathematical equations or concepts, and it will be your job to explain them in easy-to-understand terms. This could include providing step-by-step instructions for solving a problem, demonstrating various techniques with visuals or suggesting online resources for further study. My first request is {question}?",
@@ -171,7 +171,7 @@
     {
       "id": "compare-topics",
       "icon": "0xef71",
-      "color": "0xFF337EB0",
+      "color": "0xFFF2919B",
       "title": "Compare Topic",
       "disc": "Get Difference with Pros & Cons",
       "prompt": "Please compare {topic1} and {topic2} and write a document with a minimum of {count} differences between the two, including their pros and cons. Make sure to ground your comparison in reliable sources of information and data. Please use appropriate markdown format to improve the readability and comprehension of the response.",
@@ -201,7 +201,7 @@
     {
       "id": "email-generator",
       "icon": "0xf018",
-      "color": "0xFF0077b5",
+      "color": "0xFFFFD34A",
       "title": "Email Generator",
       "disc": "Generate email for any purpose",
       "prompt": "I want you to act as an email generator and help me compose a message to my {recipient}, regarding the {subject} subject. I am writing to ask for {purpose}. Can you compose an email that is both polite and professional in tone, and clearly conveys my message. Please use appropriate markdown format to improve the readability and comprehension of the response.",
@@ -231,7 +231,7 @@
     {
       "id": "chemical-reaction-visualizer",
       "icon": "0xf33d",
-      "color": "0xFF8AC926",
+      "color": "0xFF6CB5C8",
       "title": "Chemical Reactions",
       "disc": "Visualize chemical reactions",
       "prompt": "Consider the chemical reaction {equation}. Explain it & Write out the balanced chemical equation for the reaction between these two reactants. Draw equations in markdown & Use best visualisation techniques to make it more understandable.",
@@ -249,7 +249,7 @@
     {
       "id": "song-generator",
       "icon": "0xf1fb",
-      "color": "0xFFff69b4",
+      "color": "0xFFD4CFC0",
       "title": "Song Generator",
       "disc": "Memorize topics with songs",
       "prompt": "Write a song as {singer} on the topic of {topic}. So, I can memorize it in a better way. Use the appropriate markdown format to improve the readability and comprehension of the response.",
@@ -273,7 +273,7 @@
     {
       "id": "mcq-type-quiz",
       "icon": "0xf2e2",
-      "color": "0xFF61c9a8",
+      "color": "0xFFF7A74B",
       "title": "MCQ Type Quiz",
       "disc": "Generate MCQs with Answer",
       "prompt": "create a mcq quiz on topic {topic} with {number} number of mcq, in json format with keys question, options with list of option and answer, and all objects must be contain in a key questions. Response should directly starts with {}.",
@@ -297,7 +297,7 @@
     {
       "id": "historical-event-summary",
       "icon": "0xf101",
-      "color": "0xFFAABBCC",
+      "color": "0xFF64C598",
       "title": "Historical Event Summary",
       "disc": "Summarize a Historical Event",
       "prompt": "Summarize the {event} that took place in {year}. Provide a concise overview of the event, its significance, and its impact on {region/country/world}. You can include key dates, important figures, and any relevant details. Feel free to use bullet points or headings to structure your response and make it easier to read.",
@@ -327,9 +327,9 @@
     {
       "id": "scientific-concept",
       "icon": "0xeecf",
-      "color": "0xFFAABBCC",
+      "color": "0xFFF291C6",
       "title": "Scientific Concepts",
-      "disc": "Learn Complex Scientific Concepts",
+      "disc": "Learn Complex Science Concepts",
       "prompt": "Choose a complex scientific concept, such as {concept}, and create a visual representation that simplifies its understanding in markdown. Use diagrams, illustrations to explain the key principles and processes involved. Provide a brief description alongside the visuals to enhance comprehension. Your goal is to make the concept accessible to individuals with a basic understanding of {field} but struggling with {struggles}.",
       "schema": {
         "properties": {
@@ -357,7 +357,7 @@
     {
       "id": "historical-event-analysis",
       "icon": "0xee74",
-      "color": "0xFFAABBCC",
+      "color": "0xFF7EC7E0",
       "title": "History Analysis",
       "disc": "Understand History with Analysis",
       "prompt": "Choose a significant historical event, such as {event}, and provide a comprehensive analysis of its causes, consequences, and impact on society. In your analysis, consider the political, social, and economic factors that contributed to the event. Use relevant examples, primary sources, and scholarly references to support your analysis. Give response in markdown.",
