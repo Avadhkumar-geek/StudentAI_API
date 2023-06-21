@@ -249,7 +249,7 @@
     {
       "id": "song-generator",
       "icon": "0xf1fb",
-      "color": "0xFFD4CFC0",
+      "color": "0xFF9E9E9E",
       "title": "Song Generator",
       "disc": "Memorize topics with songs",
       "prompt": "Write a song as {singer} on the topic of {topic}. So, I can memorize it in a better way. Use the appropriate markdown format to improve the readability and comprehension of the response.",
