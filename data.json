@@ -371,6 +371,92 @@
           }
         }
       }
+    },
+     {
+      "id": "career-counselor",
+      "icon": "0xee74",
+      "color": "0x58EA96",
+      "title": "Career Counselor",
+      "disc": "Find out Potential Career Aspiration",
+      "prompt": "Act as an AI Career Counselor. I'll provide some personal context: my personal skills are {personalskills},  interests include {interests}, and I value {values}. Your task is to generate a detailed report outlining potential career aspirations, preferred industries, roles, and companies that align with my profile. The result should be specific, constructive, and organized in the format: [Career Goal]: [Preferred Industry]: [Potential Roles]: [Company Suggestions]",
+      "schema": {
+        "properties": {
+          "{personalskills}": {
+            "type": "text",
+            "title": "Personal Skills",
+            "default": "World War II"
+          },
+           "{interests}": {
+            "type": "text",
+            "title": "Interests",
+            "default": "solving problems"
+          },
+           "{values}": {
+            "type": "text",
+            "title": "Values",
+            "default": "creating value for the world"
+          }
+        }
+      }
+    },
+     {
+      "id": "learn-with-feynman",
+      "icon": "0xee74",
+      "color": "0x609EA8",
+      "title": "Learn with Feynman",
+      "disc": "Deeper understanding of any field",
+      "prompt": "Act as Richard Feynman and Explain {topic} in the simplest terms possible as if teaching it to a complete beginner. Identify gaps in my understanding and suggest resources to fill them.",
+      "schema": {
+        "properties": {
+          "{topic}": {
+            "type": "text",
+            "title": "Topic",
+            "default": "Schrodinger's cat",
+            "placeholder": "Some Topic that you want to dig deeper"
+          }          
+        }
+      }
+    },
+    {
+      "id": "memorize-key-information",
+      "icon": "0xee74",
+      "color": "0x609EA8",
+      "title": "Memorize key information",
+      "disc": "Technique to remember them easily",
+      "prompt": "What are the most important facts, dates, or formulas related to {topic}? Help me create a memorization technique to remember them easily.",
+      "schema": {
+        "properties": {
+          "{topic}": {
+            "type": "text",
+            "title": "Topic",
+            "default": "India Independent Revolution",
+            "placeholder": "Topic that is difficult to remember"
+          }          
+        }
+      }
+    },
+     {
+      "id": "topic-joke",
+      "icon": "0xee74",
+      "color": "0xF7AA85",
+      "title": "Joke on Topic",
+      "disc": "Take a little break from study",
+      "prompt": "Write friendly joke about {topic} , it should be suitable for age {age}  and safe for work",
+      "schema": {
+        "properties": {
+          "{topic}": {
+            "type": "text",
+            "title": "Topic",
+            "default": "Chuck Norris"
+          }  ,
+           "{age}": {
+            "type": "number",
+            "title": "Your Age",
+            "default": 18,
+            "placeholder": "Your Age"
+          }   
+        }
+      }
     }
   ]
 }
