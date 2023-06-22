@@ -423,7 +423,7 @@
       "color": "0x609EA8",
       "title": "Memorize key information",
       "disc": "Technique to remember them easily",
-      "prompt": " What are the most important facts, dates, or formulas related to {topic}? Help me create a memorization technique to remember them easily.",
+      "prompt": "What are the most important facts, dates, or formulas related to {topic}? Help me create a memorization technique to remember them easily.",
       "schema": {
         "properties": {
           "{topic}": {
@@ -432,6 +432,29 @@
             "default": "India Independent Revolution",
             "placeholder": "Topic that is difficult to remember"
           }          
+        }
+      }
+    },
+     {
+      "id": "topic-joke",
+      "icon": "0xee74",
+      "color": "0xF7AA85",
+      "title": "Joke on Topic",
+      "disc": "Take a little break from study",
+      "prompt": "Write friendly joke about {topic} , it should be suitable for age {age}  and safe for work",
+      "schema": {
+        "properties": {
+          "{topic}": {
+            "type": "text",
+            "title": "Topic",
+            "default": "Chuck Norris"
+          }  ,
+           "{age}": {
+            "type": "number",
+            "title": "Your Age",
+            "default": 18,
+            "placeholder": "Your Age"
+          }   
         }
       }
     }
