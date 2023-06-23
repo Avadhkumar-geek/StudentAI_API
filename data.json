@@ -79,25 +79,19 @@
       }
     },
     {
-      "id": "summarise-text",
-      "icon": "0xf3ff",
+      "id": "mindmap-generator",
+      "icon": "0xf1ae",
       "color": "0xFF5BBA6F",
-      "title": "Summarize the Text",
-      "disc": "Easy & Quick to Understand",
-      "prompt": "Summarize the text {text} in {count} words. Ensure the summary is clear, concise, and easy to understand for a general audience. Please use appropriate markdown format to improve the readability and comprehension of the response.",
+      "title": "Mind Map Generator",
+      "disc": "Generate Mind Map on Topic",
+      "prompt": "Create a mindmap to visually represent the main concepts and relationships of a given topic in syntax compatible to mermaid tool . Use appropriate formatting to enhance the readability and visual appeal of the mindmap, with insights from a Mind Mapping Expert and a UX Designer. Collaborate with a Technical Writer to write clear and concise labels or descriptions for each node to provide a clear understanding of the connections between the different concepts. \nRules:  \n1. Do not use dashes in your response. If necessary, use spaces instead. \n2. Just return output starting from mindmap. \n3. Do not write explanation or anything else.\nAll three strict rule should be followed strictly. Example: {'user': 'create mindmap on topic mindmap', 'assistant': 'mindmap root((mindmap)) Origins Long history : :icon(fa fa-book) Popularisation British popular psychology author Tony Buzan Research On effectivness<br/>and features On Automatic creation Uses Creative techniques Strategic planning Argument mapping Tools Pen and paper Mermaid'},'user': 'Follow above syntax and create mindmap on topic {topic}'",
       "schema": {
         "properties": {
-          "{text}": {
+          "{topic}": {
             "type": "text",
-            "title": "Enter Text",
-            "default": "",
-            "placeholder": "Enter text to summarize"
-          },
-          "{count}": {
-            "type": "number",
-            "title": "No. of words",
-            "default": "200",
-            "placeholder": "Enter a number"
+            "title": "Topic",
+            "default": "Networking",
+            "placeholder": "Enter a topic to generate mindmap"
           }
         }
       }
@@ -113,7 +107,7 @@
         "properties": {
           "{word}": {
             "type": "text",
-            "title": "Enter Word",
+            "title": "Word",
             "default": "",
             "placeholder": "Consult a dictionary and enter a word"
           }
@@ -131,7 +125,7 @@
         "properties": {
           "{sentence}": {
             "type": "text",
-            "title": "Enter Sentence",
+            "title": "Sentence",
             "default": "",
             "placeholder": "Enter a sentence to translate"
           },
@@ -384,17 +378,20 @@
           "{personalskills}": {
             "type": "text",
             "title": "Personal Skills",
-            "default": "World War II"
+            "default": "World War II",
+            "placeholder": "Enter Personal Skills"
           },
           "{interests}": {
             "type": "text",
             "title": "Interests",
-            "default": "solving problems"
+            "default": "solving problems",
+            "placeholder": "Enter Interests"
           },
           "{values}": {
             "type": "text",
             "title": "Values",
-            "default": "creating value for the world"
+            "default": "creating value for the world",
+            "placeholder": "Enter Values"
           }
         }
       }
@@ -447,7 +444,8 @@
           "{topic}": {
             "type": "text",
             "title": "Topic",
-            "default": "Chuck Norris"
+            "default": "Chuck Norris",
+            "placeholder": "Topic that you want to joke about"
           },
           "{age}": {
             "type": "number",
@@ -462,8 +460,8 @@
       "id": "programming-language-recommender",
       "icon": "0xe176",
       "color": "0xFF878F9E",
-      "title": "Programming Language Recommender",
-      "disc": "Find the Perfect Programming Language",
+      "title": "Language Recommender",
+      "disc": "Find the Perfect Coding Language",
       "prompt": "I want to learn a new programming language, but I'm not sure which one to choose. Can you recommend a programming language based on my preferences and requirements? Here are some details to consider:\n\n- **Experience Level:** I have {experience} years of experience in programming.\n- **Application Domain:** I'm interested in developing {domain} applications.\n- **Performance Requirements:** The language should be suitable for {performance}.\n- **Ease of Learning:** I prefer a language that is {learning} to learn.\n- **Community and Resources:** The language should have a thriving community and abundant learning resources.\n\nPlease provide a recommendation along with a brief explanation of why it is a good fit for me.",
       "schema": {
         "properties": {
@@ -567,43 +565,25 @@
       }
     },
     {
-      "id": "career-choice",
-      "icon": "0xf02c6",
-      "color": "0xFF3C8C54",
-      "title": "Career Choice",
-      "disc": "Discover Your Ideal Career Path",
-      "prompt": "Are you unsure about your career choice? Let's find your ideal career path together. Please provide some information about yourself, including your interests, skills, and values. Based on this information, I will suggest potential career options that align with your profile. Additionally, please mention any specific industries or job roles you are considering. Feel free to include any additional details that might be relevant.",
+      "id": "summarise-text",
+      "icon": "0xf3ff",
+      "color": "0xFF5BBA6F",
+      "title": "Summarize the Text",
+      "disc": "Easy & Quick to Understand",
+      "prompt": "Summarize the text {text} in {count} words. Ensure the summary is clear, concise, and easy to understand for a general audience. Please use appropriate markdown format to improve the readability and comprehension of the response.",
       "schema": {
         "properties": {
-          "interests": {
+          "{text}": {
             "type": "text",
-            "title": "Interests",
-            "placeholder": "Enter your interests (e.g., technology, art, healthcare)"
+            "title": "Enter Text",
+            "default": "",
+            "placeholder": "Enter text to summarize"
           },
-          "skills": {
-            "type": "text",
-            "title": "Skills",
-            "placeholder": "Enter your skills (e.g., programming, communication, problem-solving)"
-          },
-          "values": {
-            "type": "text",
-            "title": "Values",
-            "placeholder": "Enter your values (e.g., work-life balance, helping others, creativity)"
-          },
-          "industries": {
-            "type": "text",
-            "title": "Preferred Industries",
-            "placeholder": "Enter any specific industries you are considering"
-          },
-          "job_roles": {
-            "type": "text",
-            "title": "Preferred Job Roles",
-            "placeholder": "Enter any specific job roles you are considering"
-          },
-          "additional_details": {
-            "type": "text",
-            "title": "Additional Details",
-            "placeholder": "Enter any additional details or preferences"
+          "{count}": {
+            "type": "number",
+            "title": "No. of words",
+            "default": "200",
+            "placeholder": "Enter a number"
           }
         }
       }
