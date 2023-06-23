@@ -372,10 +372,10 @@
         }
       }
     },
-     {
+    {
       "id": "career-counselor",
-      "icon": "0xee74",
-      "color": "0x58EA96",
+      "icon": "0xe6f4",
+      "color": "0xFFEAC238",
       "title": "Career Counselor",
       "disc": "Find out Potential Career Aspiration",
       "prompt": "Act as an AI Career Counselor. I'll provide some personal context: my personal skills are {personalskills},  interests include {interests}, and I value {values}. Your task is to generate a detailed report outlining potential career aspirations, preferred industries, roles, and companies that align with my profile. The result should be specific, constructive, and organized in the format: [Career Goal]: [Preferred Industry]: [Potential Roles]: [Company Suggestions]",
@@ -386,12 +386,12 @@
             "title": "Personal Skills",
             "default": "World War II"
           },
-           "{interests}": {
+          "{interests}": {
             "type": "text",
             "title": "Interests",
             "default": "solving problems"
           },
-           "{values}": {
+          "{values}": {
             "type": "text",
             "title": "Values",
             "default": "creating value for the world"
@@ -399,10 +399,10 @@
         }
       }
     },
-     {
+    {
       "id": "learn-with-feynman",
-      "icon": "0xee74",
-      "color": "0x609EA8",
+      "icon": "0xf33c",
+      "color": "0xFFE06278",
       "title": "Learn with Feynman",
       "disc": "Deeper understanding of any field",
       "prompt": "Act as Richard Feynman and Explain {topic} in the simplest terms possible as if teaching it to a complete beginner. Identify gaps in my understanding and suggest resources to fill them.",
@@ -413,14 +413,14 @@
             "title": "Topic",
             "default": "Schrodinger's cat",
             "placeholder": "Some Topic that you want to dig deeper"
-          }          
+          }
         }
       }
     },
     {
       "id": "memorize-key-information",
-      "icon": "0xee74",
-      "color": "0x609EA8",
+      "icon": "0xe33d",
+      "color": "0xFFF19262",
       "title": "Memorize key information",
       "disc": "Technique to remember them easily",
       "prompt": "What are the most important facts, dates, or formulas related to {topic}? Help me create a memorization technique to remember them easily.",
@@ -431,14 +431,14 @@
             "title": "Topic",
             "default": "India Independent Revolution",
             "placeholder": "Topic that is difficult to remember"
-          }          
+          }
         }
       }
     },
-     {
+    {
       "id": "topic-joke",
-      "icon": "0xee74",
-      "color": "0xF7AA85",
+      "icon": "0xef4f",
+      "color": "0xFFAA82B3",
       "title": "Joke on Topic",
       "disc": "Take a little break from study",
       "prompt": "Write friendly joke about {topic} , it should be suitable for age {age}  and safe for work",
@@ -448,13 +448,163 @@
             "type": "text",
             "title": "Topic",
             "default": "Chuck Norris"
-          }  ,
-           "{age}": {
+          },
+          "{age}": {
             "type": "number",
             "title": "Your Age",
             "default": 18,
             "placeholder": "Your Age"
-          }   
+          }
+        }
+      }
+    },
+    {
+      "id": "programming-language-recommender",
+      "icon": "0xe176",
+      "color": "0xFF878F9E",
+      "title": "Programming Language Recommender",
+      "disc": "Find the Perfect Programming Language",
+      "prompt": "I want to learn a new programming language, but I'm not sure which one to choose. Can you recommend a programming language based on my preferences and requirements? Here are some details to consider:\n\n- **Experience Level:** I have {experience} years of experience in programming.\n- **Application Domain:** I'm interested in developing {domain} applications.\n- **Performance Requirements:** The language should be suitable for {performance}.\n- **Ease of Learning:** I prefer a language that is {learning} to learn.\n- **Community and Resources:** The language should have a thriving community and abundant learning resources.\n\nPlease provide a recommendation along with a brief explanation of why it is a good fit for me.",
+      "schema": {
+        "properties": {
+          "{experience}": {
+            "type": "number",
+            "title": "Years of Experience",
+            "default": 2,
+            "placeholder": "Enter your years of programming experience"
+          },
+          "{domain}": {
+            "type": "text",
+            "title": "Application Domain",
+            "default": "web",
+            "placeholder": "Enter the application domain of interest"
+          },
+          "{performance}": {
+            "type": "text",
+            "title": "Performance Requirements",
+            "default": "high-performance",
+            "placeholder": "Enter your performance requirements"
+          },
+          "{learning}": {
+            "type": "text",
+            "title": "Ease of Learning",
+            "default": "easy",
+            "placeholder": "Enter your preferred learning difficulty"
+          }
+        }
+      }
+    },
+    {
+      "id": "essay-assistance",
+      "icon": "0xf04e",
+      "color": "0xFFD1784C",
+      "title": "Essay Assistance",
+      "disc": "Get help with writing an academic essay",
+      "prompt": "Write a {type} essay on the topic of {topic}. Provide a well-structured and coherent essay that includes an introduction, body paragraphs, and a conclusion. Make sure to support your arguments with relevant evidence and examples. Aim for a word count of {word_count} words. Please pay attention to grammar, spelling, and overall writing style. Feel free to ask any specific questions or provide additional instructions.",
+      "schema": {
+        "properties": {
+          "{type}": {
+            "type": "text",
+            "title": "Essay Type",
+            "default": "Argumentative",
+            "placeholder": "Enter Essay Type"
+          },
+          "{topic}": {
+            "type": "text",
+            "title": "Essay Topic",
+            "default": "The Impact of Technology on Education",
+            "placeholder": "Enter Essay Topic"
+          },
+          "{word_count}": {
+            "type": "number",
+            "title": "Word Count",
+            "default": 1000,
+            "placeholder": "Enter Word Count"
+          }
+        }
+      }
+    },
+    {
+      "id": "copywriting-tips",
+      "icon": "0xef87",
+      "color": "0xFF856553",
+      "title": "Copywriting Tips",
+      "disc": "Learn Effective Copywriting Techniques",
+      "prompt": "Share {number} essential tips for writing compelling copy. Each tip should be concise and actionable. Provide practical examples to illustrate each tip and explain its importance in creating persuasive and engaging content.",
+      "schema": {
+        "properties": {
+          "{number}": {
+            "type": "number",
+            "title": "Number of Tips",
+            "default": 5,
+            "placeholder": "Enter the number of tips"
+          }
+        }
+      }
+    },
+    {
+      "id": "research-topic-suggestions",
+      "icon": "0xf34b",
+      "color": "0xFF6B5A62",
+      "title": "Research Topic Suggestions",
+      "disc": "Generate Research Topic Ideas",
+      "prompt": "Generate {number} research topic ideas in the field of {field}. Each topic idea should be a concise and clear research question or problem statement that is relevant to the chosen field. You can use keywords, existing research gaps, or emerging trends to inspire the topic ideas. Feel free to provide a brief justification or rationale for each topic idea if desired.",
+      "schema": {
+        "properties": {
+          "{number}": {
+            "type": "number",
+            "title": "Number of Ideas",
+            "default": 5,
+            "placeholder": "Enter the number of research topic ideas"
+          },
+          "{field}": {
+            "type": "text",
+            "title": "Field of Research",
+            "default": "Artificial Intelligence",
+            "placeholder": "Enter the field of research"
+          }
+        }
+      }
+    },
+    {
+      "id": "career-choice",
+      "icon": "0xf02c6",
+      "color": "0xFF3C8C54",
+      "title": "Career Choice",
+      "disc": "Discover Your Ideal Career Path",
+      "prompt": "Are you unsure about your career choice? Let's find your ideal career path together. Please provide some information about yourself, including your interests, skills, and values. Based on this information, I will suggest potential career options that align with your profile. Additionally, please mention any specific industries or job roles you are considering. Feel free to include any additional details that might be relevant.",
+      "schema": {
+        "properties": {
+          "interests": {
+            "type": "text",
+            "title": "Interests",
+            "placeholder": "Enter your interests (e.g., technology, art, healthcare)"
+          },
+          "skills": {
+            "type": "text",
+            "title": "Skills",
+            "placeholder": "Enter your skills (e.g., programming, communication, problem-solving)"
+          },
+          "values": {
+            "type": "text",
+            "title": "Values",
+            "placeholder": "Enter your values (e.g., work-life balance, helping others, creativity)"
+          },
+          "industries": {
+            "type": "text",
+            "title": "Preferred Industries",
+            "placeholder": "Enter any specific industries you are considering"
+          },
+          "job_roles": {
+            "type": "text",
+            "title": "Preferred Job Roles",
+            "placeholder": "Enter any specific job roles you are considering"
+          },
+          "additional_details": {
+            "type": "text",
+            "title": "Additional Details",
+            "placeholder": "Enter any additional details or preferences"
+          }
         }
       }
     }
