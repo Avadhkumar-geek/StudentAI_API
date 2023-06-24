@@ -37,19 +37,25 @@
       }
     },
     {
-      "id": "grammar-correction",
-      "icon": "0xf05b1",
+      "id": "mcq-type-quiz",
+      "icon": "0xf2e2",
       "color": "0xFFC36B74",
-      "title": "Grammarian",
-      "disc": "Check Your Grammar",
-      "prompt": "Improve language, correct grammar and punctuation of the text delimited in backticks ```{text}```. Please use appropriate markdown format to improve the readability and comprehension of the response.",
+      "title": "MCQ Type Quiz",
+      "disc": "Generate MCQs with Answer",
+      "prompt": "create a mcq quiz on topic {topic} with {number} number of mcq, in json format with keys question, options with list of option and answer, and all objects must be contain in a key questions. Response should directly starts with {}.",
       "schema": {
         "properties": {
-          "{text}": {
+          "{topic}": {
             "type": "text",
-            "title": "Enter Text",
-            "default": "I is very happy",
-            "placeholder": "Enter text"
+            "title": "Enter Name of the Topic",
+            "default": "Indian history",
+            "placeholder": "Write any topic"
+          },
+          "{number}": {
+            "type": "number",
+            "title": "No. of Questions",
+            "default": "5",
+            "Placeholder": "Enter number"
           }
         }
       }
@@ -163,6 +169,24 @@
       }
     },
     {
+      "id": "grammar-correction",
+      "icon": "0xf05b1",
+      "color": "0xFFF7A74B",
+      "title": "Grammarian",
+      "disc": "Check Your Grammar",
+      "prompt": "Improve language, correct grammar and punctuation of the text delimited in backticks ```{text}```. Please use appropriate markdown format to improve the readability and comprehension of the response.",
+      "schema": {
+        "properties": {
+          "{text}": {
+            "type": "text",
+            "title": "Enter Text",
+            "default": "I is very happy",
+            "placeholder": "Enter text"
+          }
+        }
+      }
+    },
+    {
       "id": "compare-topics",
       "icon": "0xef71",
       "color": "0xFFF2919B",
@@ -260,30 +284,6 @@
             "title": "Topic",
             "default": "",
             "placeholder": "Enter the topic of the song."
-          }
-        }
-      }
-    },
-    {
-      "id": "mcq-type-quiz",
-      "icon": "0xf2e2",
-      "color": "0xFFF7A74B",
-      "title": "MCQ Type Quiz",
-      "disc": "Generate MCQs with Answer",
-      "prompt": "create a mcq quiz on topic {topic} with {number} number of mcq, in json format with keys question, options with list of option and answer, and all objects must be contain in a key questions. Response should directly starts with {}.",
-      "schema": {
-        "properties": {
-          "{topic}": {
-            "type": "text",
-            "title": "Enter Name of the Topic",
-            "default": "Indian history",
-            "placeholder": "Write any topic"
-          },
-          "{number}": {
-            "type": "number",
-            "title": "No. of Questions",
-            "default": "5",
-            "Placeholder": "Enter number"
           }
         }
       }
