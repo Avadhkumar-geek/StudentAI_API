@@ -169,24 +169,6 @@
       }
     },
     {
-      "id": "grammar-correction",
-      "icon": "0xf05b1",
-      "color": "0xFFF7A74B",
-      "title": "Grammarian",
-      "disc": "Check Your Grammar",
-      "prompt": "Improve language, correct grammar and punctuation of the text delimited in backticks ```{text}```. Please use appropriate markdown format to improve the readability and comprehension of the response.",
-      "schema": {
-        "properties": {
-          "{text}": {
-            "type": "text",
-            "title": "Enter Text",
-            "default": "I is very happy",
-            "placeholder": "Enter text"
-          }
-        }
-      }
-    },
-    {
       "id": "compare-topics",
       "icon": "0xef71",
       "color": "0xFFF2919B",
@@ -242,6 +224,24 @@
             "title": "Purpose",
             "default": "",
             "placeholder": "Enter the purpose of the email."
+          }
+        }
+      }
+    },
+    {
+      "id": "grammar-correction",
+      "icon": "0xf05b1",
+      "color": "0xFFF7A74B",
+      "title": "Grammarian",
+      "disc": "Check Your Grammar",
+      "prompt": "Improve language, correct grammar and punctuation of the text delimited in backticks ```{text}```. Please use appropriate markdown format to improve the readability and comprehension of the response.",
+      "schema": {
+        "properties": {
+          "{text}": {
+            "type": "text",
+            "title": "Enter Text",
+            "default": "I is very happy",
+            "placeholder": "Enter text"
           }
         }
       }
