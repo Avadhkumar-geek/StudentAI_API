@@ -229,24 +229,6 @@
       }
     },
     {
-      "id": "grammar-correction",
-      "icon": "0xf05b1",
-      "color": "0xFFF7A74B",
-      "title": "Grammarian",
-      "disc": "Check Your Grammar",
-      "prompt": "Improve language, correct grammar and punctuation of the text delimited in backticks ```{text}```. Please use appropriate markdown format to improve the readability and comprehension of the response.",
-      "schema": {
-        "properties": {
-          "{text}": {
-            "type": "text",
-            "title": "Enter Text",
-            "default": "I is very happy",
-            "placeholder": "Enter text"
-          }
-        }
-      }
-    },
-    {
       "id": "chemical-reaction-visualizer",
       "icon": "0xf33d",
       "color": "0xFF6CB5C8",
@@ -260,6 +242,24 @@
             "title": "Reaction Equation",
             "default": "CO2 + H20",
             "placeholder": "Enter the chemical equation"
+          }
+        }
+      }
+    },
+    {
+      "id": "grammar-correction",
+      "icon": "0xf05b1",
+      "color": "0xFFF7A74B",
+      "title": "Grammarian",
+      "disc": "Check Your Grammar",
+      "prompt": "Improve language, correct grammar and punctuation of the text delimited in backticks ```{text}```. Please use appropriate markdown format to improve the readability and comprehension of the response.",
+      "schema": {
+        "properties": {
+          "{text}": {
+            "type": "text",
+            "title": "Enter Text",
+            "default": "I is very happy",
+            "placeholder": "Enter text"
           }
         }
       }
